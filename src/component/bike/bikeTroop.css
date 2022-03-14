@@ -1,0 +1,124 @@
+.bikeTroopContainer {
+    color: #fff;
+    height: 200px;
+    width: 180px;
+    margin: 0px 5px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+}
+.bikeTroopChild {
+    box-shadow: inset 3px 0 10px -4px rgba(255,255,255,0.7), inset -3px -3px 10px rgba(255,255,255,0.7);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    position: relative;
+}
+
+  a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a:active {
+    text-decoration: none;
+  }
+.bikeTroopText {
+    font-size: 14px;
+    width: 90%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+
+}
+.bikeTroopImg {
+    height: 60%;
+    width: 90%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.viewDetailContainer {
+    height: 20%;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #000;
+    font-weight: 700;
+}
+
+.viewIcon {
+    font-size: 30px;
+    font-weight: 400;
+}
+.bikeTroopAnimation {
+    animation: bikeTroop 1s 1;
+}
+
+@keyframes bikeTroop {
+    from {   
+        height: 100px;
+        width: 90px;}
+    to {
+        height: 210px;
+        width: 190px;
+    }
+
+}
+@media (max-width: 760px) {
+  .bikeTroopContainer {
+    height: 150px;
+    width: 135px;
+  }
+
+  .bikeTroopText {
+    font-size: 12px;
+  }
+  .viewDetailContainer {
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .bikeTroopAnimation {
+    animation: none;
+  }
+}
+@media (max-width: 320px) {
+  .bikeTroopContainer {
+    height: 111px;
+    width: 100px;
+  }
+  .bikeTroopText {
+    font-size: 10px;
+  }
+  .viewIcon {
+    font-size: 17px;
+  }
+  .viewDetailContainer {
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .bikeTroopAnimation {
+    animation: none;
+  }
+}

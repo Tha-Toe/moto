@@ -1,0 +1,287 @@
+*{
+    font-family: sans-serif;
+}
+.homeMainContainer {
+    height: 100vh;
+}
+.homeContainer {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 90%;
+}
+
+
+.homeChildLeft {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+
+.homeChildLeftBaby {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 100px;
+    width: 70%;
+}
+.homeTextNode {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+.homeTextNodeMobile {
+    display: none;
+}
+.homeTextNodeChild {
+    margin-bottom: 10px;
+}
+.homeTextNodeAnimation {
+    animation: textNode 1s 1;
+}
+
+.logoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    position: relative;
+    margin-bottom: 50px;
+} 
+.yamahaText {
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin-left: 10px;
+    background-color: #000;
+    position: relative;
+}
+.yamahaTextAnimation {
+    animation: logo 3s 1;
+}
+.imgLogo {
+    height: 50px;
+    width: 50px;
+}
+.motoTextContainer {
+    font-weight: 400;
+    font-size: 20px;
+    height: 100%;
+}
+
+
+@keyframes logo {
+    0% {
+        color: #000;
+        margin-left: -60px;
+        margin-right: -60px;
+    }
+    30% {
+        letter-spacing: 25px;
+        margin-left: -60px;
+        margin-right: -60px;
+    }
+    85% {
+        letter-spacing: 8px;
+        margin-left: -60px;
+        margin-right: -60px;
+    }
+    95% {
+        text-shadow: #fff;
+    }
+}
+
+@keyframes textNode {
+    from {left: -200px;}
+    to {left: 20px;}
+}
+
+/*
+home child right
+*/
+
+.homeChildRight {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeImageCard {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 3px 3px 5px rgba(255,255,255,0.7), -3px -3px 5px rgba(255,255,255,0.7);
+    position: relative;
+}
+
+.homeImage {
+    height: 320px;
+    width: 500px;
+}
+.homgImageCardAnimation {
+    animation: homeImage 1s 1;
+}
+
+@keyframes homeImage {
+    from {left: 100px;}
+    to {left: -10px;}
+}
+
+.homeBottomContainer {
+    color: #fff;
+    width: 100%;
+    height: 10%;
+}
+.homeBottomText {
+    margin-left: 50px;
+    position: relative;
+}
+
+.homeBottomAnimation {
+    animation: hbAnimation .5s 1;
+}
+
+@keyframes hbAnimation {
+    from {
+        left: -100px;
+    }
+    to {
+        left: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .homeMainContainer {
+        height: auto;
+    }
+    .homeContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        margin-top: 100px;
+    }
+    .homeChildLeft {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 70px;
+    }
+    .homeChildLeftBaby {
+        margin-left: 0px;
+        width: auto;
+    }
+    .yamahaText {
+        font-size: 60px;
+        letter-spacing: 6px;
+    }
+    .imgLogo {
+        height: 50px;
+        width: 50px;
+    }
+    .logoContainer {
+        margin-bottom: 100px;
+    } 
+    .homeTextNode {
+        display: none;
+    }
+    .homeTextNodeMobile {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+    .homeChildRight {
+        width: 100%;
+    }
+
+    
+    .homeImage {
+        height: 420px;
+        width: 700px;
+    }
+    .homeBottomContainer {
+        color: #fff;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .homeBottomText {
+        margin-left: 50px;
+        position: relative;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .yamahaText {
+        font-size: 40px;
+        letter-spacing: 6px;
+    }
+    .imgLogo {
+        height: 35px;
+        width: 35px;
+    }
+
+    .homeImage {
+        height: 270px;
+        width: 450px;
+    }
+
+}
+@media (max-width: 520px) {
+
+    .yamahaText {
+        font-size: 30px;
+        letter-spacing: 6px;
+    }
+    .imgLogo {
+        height: 25px;
+        width: 25px;
+    }
+
+    .homeImage {
+        height: 200px;
+        width: 300px;
+    }
+    .homeTextNodeMobile {
+        font-size: 12px;
+        font-weight: 300;
+    }
+    .homeBottomText {
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+}
+@media (max-width: 320px) {
+
+    .yamahaText {
+        font-size: 30px;
+        letter-spacing: 4px;
+    }
+    .imgLogo {
+        height: 25px;
+        width: 25px;
+    }
+
+    .homeImage {
+        height: 150px;
+        width: 250px;
+    }
+
+
+}
