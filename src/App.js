@@ -35,7 +35,7 @@ import cbx1000 from "./component/photoStore/cbx1000.jpg";
 
 import ducati916 from "./component/photoStore/ducati916.jpg";
 import ducatiPanigaleV4 from "./component/photoStore/ducatiPanigaleV4.jpeg";
-import ducatiMonster from "./component/photoStore/ducatiMonster.webp.crdownload";
+import ducatiMonster from "./component/photoStore/ducatiMonster.webp";
 import ducatiSportClassic from "./component/photoStore/ducatiSportClassic.jpg";
 import ducatiHyperMotard950Sp from "./component/photoStore/ducatiHyperMotard950Sp.jpg";
 import ducatiDesmosediciRR from "./component/photoStore/ducatiDesmosediciRR.jpg";

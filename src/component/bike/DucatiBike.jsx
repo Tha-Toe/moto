@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
 
 import ducati916 from "../photoStore/ducati916.jpg";
 import ducatiPanigaleV4 from "../photoStore/ducatiPanigaleV4.jpeg";
-import ducatiMonster from "../photoStore/ducatiMonster.webp.crdownload";
+import ducatiMonster from "../photoStore/ducatiMonster.webp";
 import ducatiSportClassic from "../photoStore/ducatiSportClassic.jpg";
 import ducatiHyperMotard950Sp from "../photoStore/ducatiHyperMotard950Sp.jpg";
 import ducatiDesmosediciRR from "../photoStore/ducatiDesmosediciRR.jpg";
