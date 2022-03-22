@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect,useState } from "react";
 import './contact.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser,faSquarePhone,faMapLocationDot,faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faGithub,faFacebook} from "@fortawesome/free-brands-svg-icons";
 import {useInView} from "react-intersection-observer";
-import {motion} from "framer-motion"
+import {motion, useAnimation} from "framer-motion"
 
 
 
@@ -13,16 +13,54 @@ const Contact = () => {
     const {ref: contactMeRef, inView: contactMeVisible} = useInView();
     const {ref: skillRef, inView: skillVisible} = useInView();
 
+    const contactMeAnimation = useAnimation();
+    const skillAnimation = useAnimation();
+
+    const [contactMeInView,setContactMeInView] = useState(false);
+
+    useEffect(() => {
+        if(contactVisible) {
+            setContactMeInView(true);
+        }
+    },[contactVisible])
+
+    useEffect(() => {
+        if(contactMeVisible) {
+            contactMeAnimation.start(() => ({
+                left: 0,
+                opacity: 1,
+                transition: {
+                    type: "all",
+                    duration: 1.5,                    
+                }
+            }))
+        }
+    },[contactMeVisible,contactMeAnimation])
+
+    useEffect(() => {
+        if(skillVisible) {
+            skillAnimation.start(() => ({
+                left: 0,
+                opacity: 1,
+                transition: {
+                    type: "all",
+                    duration: 1.5,                    
+                }
+            }))
+        }
+    },[skillVisible,skillAnimation])
 
     return (
         <div className="contactMainContainer">
             <div className="contactHeader">
-                <div  ref={contactRef} className = {`${"contact"} ${contactVisible? "contactAnimation": ""}`}>Contact</div>
+                <div  ref={contactRef} className = {`${"contact"} ${contactMeInView? "contactAnimation": ""}`}>Contact</div>
                 <div className="me"><span>Me</span></div>
             </div>
             <div className="contactContainer">
                 <div className="contactLeft">
-                    <motion.div className = {`${"contactCard"} ${contactMeVisible? "contactCardAnimation": ""}`} 
+                    <motion.div className = {`${"contactCard"}`} 
+                        animate = {contactMeAnimation}
+                        initial = {{left: -100, opacity: 0,}}
                         ref={contactMeRef} 
                         whileHover = {{
                                 position: "relative",
@@ -57,8 +95,10 @@ const Contact = () => {
                     </motion.div>
                 </div>
                 <div className="contactRight">
-                    <motion.div className = {`${"skillCard"} ${skillVisible? "skillCardAnimation": ""}`} 
+                    <motion.div className = {`${"skillCard"}`} 
                     ref={skillRef}
+                    animate = {skillAnimation}
+                    initial = {{right: -100, opacity: 0,}}
                     whileHover = {{
                         position: "relative",
                         zIndex: 1,

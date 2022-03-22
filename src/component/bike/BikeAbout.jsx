@@ -8,7 +8,7 @@ const BikeAbout = () => {
 
     return (
         <div className="bikeAboutContainer">
-            <div className = {`${"aboutYamaha"} ${aboutVisible? "aboutYamahaAnimation": ""}`} ref={aboutRef}>About<img src={logo} className = {`${"aboutLogo"} ${aboutVisible? "aboutYamahaLogoAnimation": ""}`}/>YAMAHA</div>
+            <div className = {`${"aboutYamaha"} ${aboutVisible? "aboutYamahaAnimation": ""}`} ref={aboutRef}>About YAMAHA</div>
             <div className="aboutMainContainer">
                 <div className="aboutContainer">
                     <div className="firstAbout">Native name</div>

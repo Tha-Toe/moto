@@ -3,6 +3,9 @@
 }
 .homeMainContainer {
     height: 100vh;
+    background-image: url("../photoStore/homeBgDesktopView.jpg");
+    background-size: cover;
+
 }
 .homeContainer {
     color: #fff;
@@ -56,26 +59,46 @@
     margin-bottom: 50px;
 } 
 .yamahaText {
-    font-size: 60px;
+    font-size: 45px;
     font-weight: 700;
-    letter-spacing: 6px;
+    letter-spacing: 3px;
     margin-left: 10px;
-    background-color: #000;
     position: relative;
 }
 .yamahaTextAnimation {
     animation: logo 3s 1;
 }
+
 .imgLogo {
     height: 50px;
     width: 50px;
+    border-radius: 30px;
+    color: #fff;
+}
+.imgLogoAnimation {
+    animation: ilAnimation 3s 1;
 }
 .motoTextContainer {
     font-weight: 400;
     font-size: 20px;
     height: 100%;
 }
+@keyframes ilAnimation {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
 
+    }
+    85% {
+        opacity: 0;
+
+    }
+    95% {
+        opacity: .5;
+    }
+}
 
 @keyframes logo {
     0% {
@@ -84,12 +107,12 @@
         margin-right: -60px;
     }
     30% {
-        letter-spacing: 25px;
+        letter-spacing: 15px;
         margin-left: -60px;
         margin-right: -60px;
     }
     85% {
-        letter-spacing: 8px;
+        letter-spacing: 6px;
         margin-left: -60px;
         margin-right: -60px;
     }
@@ -166,8 +189,6 @@ home child right
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 20px;
-        margin-top: 100px;
     }
     .homeChildLeft {
         display: flex;
@@ -176,6 +197,7 @@ home child right
         justify-content: center;
         width: 100%;
         margin-bottom: 70px;
+        margin-top: 100px;
     }
     .homeChildLeftBaby {
         margin-left: 0px;
@@ -226,6 +248,10 @@ home child right
 }
 
 @media (max-width: 760px) {
+    .homeMainContainer {
+        background-image: url("../photoStore/homeBgMobileVIew.jpg");
+        background-size: cover;
+    }
 
     .yamahaText {
         font-size: 40px;

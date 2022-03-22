@@ -34,14 +34,8 @@
     width: 45%;
 }
 
-.aboutLogo {
-    width: 40px;
-}
 .aboutYamahaAnimation {
     animation: abyAnimation 2s 1;
-}
-.aboutYamahaLogoAnimation {
-    animation: abylAnimation 2s 1;
 }
 
 @keyframes abyAnimation {
@@ -59,21 +53,6 @@
         text-shadow: #fff;
     }
 }
-@keyframes abylAnimation {
-    0% {
-        width: 0;
-    }
-    30% {
-        width: 50px;
-
-    }
-    85% {
-        width: 40px;
-    }
-    95% {
-        text-shadow: #fff;
-    }
-}
 
 @media (max-width: 760px) {
     .bikeAboutContainer {
@@ -82,9 +61,7 @@
     .aboutYamaha {
         font-size: 30px;
     }
-    .aboutLogo {
-        width: 30px;
-    }
+
     .aboutMainContainer {
         width: 60%;
         font-size: 14px;
@@ -99,10 +76,7 @@
     .aboutYamaha {
         font-size: 30px;
     }
-    .aboutLogo {
-        width: 30px;
-        margin: 0 10px;
-    }
+
     .aboutMainContainer {
         width: 75%;
         font-size: 13px;
@@ -123,21 +97,7 @@
             text-shadow: #fff;
         }
     }
-    @keyframes abylAnimation {
-        0% {
-            width: 0;
-        }
-        30% {
-            width: 40px;
-    
-        }
-        85% {
-            width: 30px;
-        }
-        95% {
-            text-shadow: #fff;
-        }
-    }
+
 }
 @media (max-width: 320px) {
 
@@ -145,10 +105,7 @@
     .aboutYamaha {
         font-size: 25px;
     }
-    .aboutLogo {
-        width: 25px;
-        margin: 0 10px;
-    }
+
     .aboutMainContainer {
         width: 85%;
         font-size: 12px;
@@ -169,19 +126,5 @@
             text-shadow: #fff;
         }
     }
-    @keyframes abylAnimation {
-        0% {
-            width: 0;
-        }
-        30% {
-            width: 40px;
-    
-        }
-        85% {
-            width: 30px;
-        }
-        95% {
-            text-shadow: #fff;
-        }
-    }
+
 }

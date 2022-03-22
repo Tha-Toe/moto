@@ -4,7 +4,7 @@ import {useParams} from "react-router";
 import { useInView } from "react-intersection-observer";
 import {Link} from "react-router-dom";
 
-const BikeDetail = ({bikeInfoApp}) => {
+const KawasakiBikeDetail = ({bikeInfoApp}) => {
 
     const {ref: bikeLeftContainerRef, inView: bikeLeftDetailVisible} = useInView();
     const {ref: bikeRightContainerRef, inView: bikeRightDetailVisible} = useInView();
@@ -88,7 +88,7 @@ const BikeDetail = ({bikeInfoApp}) => {
                 </div>
             </div>
             <div className="bikeDetailFooter">
-                <Link to={'/'}>
+                <Link to={'/kawasaki'}>
                 <button className="backButton">Back</button>
                 </Link>
             </div>
@@ -96,4 +96,4 @@ const BikeDetail = ({bikeInfoApp}) => {
     )
 }
 
-export default BikeDetail;
+export default KawasakiBikeDetail;

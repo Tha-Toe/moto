@@ -2,7 +2,7 @@ import React from "react"
 import "./bikeTroop.css"
 import { useInView } from "react-intersection-observer"
 import { Link} from "react-router-dom";
-import BikeDetail from "./BikeDetail";
+import BikeDetail from "./YamahaBikeDetail";
 import {motion} from "framer-motion"
 
 const BikeTroop = ({eachBike}) => {
@@ -10,7 +10,7 @@ const BikeTroop = ({eachBike}) => {
 
 
     return (
-        <Link to={`/detail/${eachBike.id}`} >
+        <Link to={`/yamaha/YamahaBikeDetail/${eachBike.id}`} >
             <motion.div className="bikeTroopContainer" ref={bikeTroopRef}  whileHover = {{
                                 position: "relative",
                                 zIndex: 1,
@@ -19,7 +19,7 @@ const BikeTroop = ({eachBike}) => {
              }} >              
                     <div className={`${"bikeTroopChild"} ${bikeTroopVisible? "bikeTroopAnimation": ""}`}>
                         <img src={eachBike.img} className = "bikeTroopImg"/>
-                        <div className="bikeTroopText">
+                        <div className="yamahaBikeTroopText bikeTroopText">
                             <div>{eachBike.name}</div>
                         </div>
                         <div className="viewDetailContainer">

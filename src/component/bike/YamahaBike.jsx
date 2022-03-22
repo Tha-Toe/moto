@@ -3,7 +3,7 @@ import './bike.css';
 import logoImage from "../photoStore/ymhLogoWhite.jfif"
 import {useRef,useState} from 'react';
 import {useInView} from "react-intersection-observer";
-import BikeTroop from "./BikeTroop";
+import YamahaBikeTroop from "./YamahaBikeTroop";
 import r15Img from "../photoStore/r15Img.webp";
 import r3Img from "../photoStore/r3Img.jpg";
 import r6Img from "../photoStore/r6Img.jpg";
@@ -14,13 +14,14 @@ import mt09Img from "../photoStore/mt-09Img.jpg";
 import fz1fazer from "../photoStore/fz-1fazer.webp";
 import wr155rImg from "../photoStore/wr155rImg.jpg";
 import xsrissImg from "../photoStore/xsrissImg.webp";
+import { Link } from "react-router-dom";
 
 
 
 
-const Bike = () => {
+const YamahaBike = () => {
 
-    const [bikeInfo,setBikeInfo] = useState([
+    const [yamahaBikeInfo] = useState([
         {id: 1, name: "Yamaha YZF-R15", model: "2008-2022", enginePower: "155CC", price: "$2078",img : r15Img,maxPower: "18.6 HP @ 10,000 rpm", maxTorque: "14.1 Nm @ 8500 rpm", maxSpeed: "155 km/h", coolingSystem: "liquid cool", totalGear: "6-Speed ", fuelCapacity: "11 Litres",seatHeight: "815mm",kerbWeight: "142 Kg",},
         {id: 2, name: "Yamaha YZF-R3", model: "2015-2022", enginePower: "321CC", price: "$5299",img : r3Img, maxPower: "31 kW (42 hp) @ 10,750 rpm", maxTorque: "21.8 lb⋅ft (29.6 N⋅m) @ 9,000 rpm", maxSpeed: "180 km/h", coolingSystem: "liquid-cool", totalGear: "6-Speed", fuelCapacity: "14 Litres",seatHeight: "780mm",kerbWeight: "167 kg",},
         {id: 3, name: "Yamaha YZF-R6", model: "1999-2022", enginePower: "599CC", price: "$12,199",img : r6Img,maxPower: "87.1 kW (116.8 bhp) @ 14,500 rpm", maxTorque: "61.7 N⋅m (45.5 lb⋅ft) @ 10,500 rpm", maxSpeed: "260 km/h", coolingSystem: "liquid-cooled", totalGear: "6-Speed", fuelCapacity: "17 Litres",seatHeight: "850mm",kerbWeight: "190kg",},
@@ -35,11 +36,19 @@ const Bike = () => {
 
 
     return (
-        <div className = "bikeContainer">
-            <div className = "bikeContainerBaby">
-                {bikeInfo.map((eachBike) => <BikeTroop eachBike={eachBike}/>)}
+
+        <div className="yamahaContainer">
+            <div className = "bikeContainer">
+                <div className = "bikeContainerBaby">
+                    {yamahaBikeInfo.map((eachBike) => <YamahaBikeTroop eachBike={eachBike}/>)}
+                </div>
+            </div>
+            <div className="bikeFooter">
+                <Link to={'/'}>
+                    <button className="backButton">Back</button>
+                </Link>
             </div>
         </div>
     )
 }
-export default Bike;
+export default YamahaBike;
